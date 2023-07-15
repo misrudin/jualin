@@ -1,0 +1,156 @@
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-inner slimscroll">
+    <div id="sidebar-menu" class="sidebar-menu">
+      <ul>
+        <li class="submenu-open">
+          <h6 class="submenu-hdr">Main</h6>
+          <ul>
+            <li
+              class="<%= current_routes === routes.dashboard ? 'active' : '' %>"
+            >
+              <a href="dashboard"
+                ><i data-feather="grid"></i><span>Dashboard</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu-open">
+          <h6 class="submenu-hdr">Products</h6>
+          <ul>
+            <li>
+              <a
+                class="<%= (current_routes === routes.product_list || current_routes === routes.product_productDetails || current_routes === routes.product_editProduct ) ? 'active' : '' %>"
+                href="<%= routes.product_list %>"
+                ><i data-feather="box"></i><span>Products</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="<%= current_routes === routes.product_addProduct ? 'active' : '' %>"
+                href="<%= routes.product_addProduct %>"
+                ><i data-feather="plus-square"></i
+                ><span>Create Product</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="<%= (current_routes === routes.product_categoryList || current_routes === routes.product_addCategory || current_routes === routes.product_editCategory ) ? 'active' : '' %>"
+                href="<%= routes.product_categoryList %>"
+                ><i data-feather="codepen"></i><span>Category</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="<%= (current_routes === routes.product_brandList || current_routes === routes.product_addBrand || current_routes === routes.product_editBrand ) ? 'active' : '' %>"
+                href="<%= routes.product_brandList %>"
+                ><i data-feather="tag"></i><span>Brands</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="<%= (current_routes === routes.product_subCategoryList || current_routes === routes.product_addSubCategory || current_routes === routes.product_editSubCategory ) ? 'active' : '' %>"
+                href="<%= routes.product_subCategoryList %>"
+                ><i data-feather="speaker"></i><span>Sub Category</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu-open">
+          <h6 class="submenu-hdr">Penjualan</h6>
+          <ul>
+            <li>
+              <a
+                class="<%= (current_routes === routes.sales_salesList || current_routes === routes.sales_newSales || current_routes === routes.sales_editSales || current_routes === routes.sales_salesDetails ) ? 'active' : '' %>"
+                href="<%= routes.sales_salesList %>"
+                ><i data-feather="shopping-cart"></i><span>Penjualan</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu-open">
+          <h6 class="submenu-hdr">Pembelian</h6>
+          <ul>
+            <li>
+              <a
+                class="<%= (current_routes === routes.purchase_purchaseList || current_routes === routes.purchase_addPurchase || current_routes === routes.purchase_editPurchase ) ? 'active' : '' %>"
+                href="<%= routes.purchase_purchaseList %>"
+                ><i data-feather="shopping-bag"></i><span>Pembelian</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu-open">
+          <h6 class="submenu-hdr">Peoples</h6>
+          <ul>
+            <li>
+              <a
+                class="<%= (current_routes === routes.people_customerList || current_routes === routes.people_editCustomer || current_routes === routes.people_addCustomer ) ? 'active' : '' %>"
+                href="<%= routes.people_customerList %>"
+                ><i data-feather="user"></i><span>Customers</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="<%= (current_routes === routes.people_supplierList || current_routes === routes.people_editSupplier || current_routes === routes.people_addSupplier ) ? 'active' : '' %>"
+                href="<%= routes.people_supplierList %>"
+                ><i data-feather="users"></i><span>Suppliers</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu-open">
+          <h6 class="submenu-hdr">Laporan</h6>
+          <ul>
+            <li>
+              <a
+                class="<%= current_routes === routes.report_salesReport ? 'active' : '' %>"
+                href="<%= routes.report_salesReport %>"
+                ><i data-feather="bar-chart-2"></i
+                ><span>Laporan Penjualan</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="<%= current_routes === routes.report_purchaseOrderReport ? 'active' : '' %>"
+                href="<%= routes.report_purchaseOrderReport %>"
+                ><i data-feather="pie-chart"></i
+                ><span>Laporan Pembelian</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="submenu-open">
+          <h6 class="submenu-hdr">User Management</h6>
+          <ul>
+            <li class="submenu">
+              <a
+                href="javascript:void(0);"
+                class="<%= (current_routes === routes.users_newUser || current_routes === routes.users_usersList ) && 'active subdrop' %>"
+                ><i data-feather="users"></i><span>Manage Users</span
+                ><span class="menu-arrow"></span
+              ></a>
+              <ul>
+                <li>
+                  <a
+                    class="<%= current_routes === routes.users_newUser ? 'active' : '' %>"
+                    href="<%= routes.users_newUser %>"
+                    >New User
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="<%= current_routes === routes.users_usersList ? 'active' : '' %>"
+                    href="<%= routes.users_usersList %>"
+                    >Users List</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- /Sidebar -->
