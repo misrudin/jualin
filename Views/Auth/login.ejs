@@ -7,10 +7,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=0"
     />
     <meta name="description" content="Jualin" />
-    <meta
-      name="keywords"
-      content="Jualin"
-    />
+    <meta name="keywords" content="Jualin" />
     <meta name="author" content="Jualin" />
     <meta name="robots" content="noindex, nofollow" />
     <title>Login - Jualin</title>
@@ -52,32 +49,34 @@
                 <h3 class="m-0">Hallo</h3>
                 <h4>Selamat Datang Kembali!</h4>
               </div>
-              <div class="form-login">
-                <label>Email</label>
-                <div class="form-addons">
-                  <input
-                    value="admin@gmail.com"
-                    type="text"
-                    placeholder="Masukan email anda"
-                  />
-                  <img src="assets/img/icons/mail.svg" alt="img" />
+              <form action="/login" method="POST">
+                <div class="form-login">
+                  <label>Email</label>
+                  <div class="form-addons">
+                    <input
+                      value="admin@gmail.com"
+                      type="text"
+                      placeholder="Masukan email anda"
+                    />
+                    <img src="assets/img/icons/mail.svg" alt="img" />
+                  </div>
                 </div>
-              </div>
-              <div class="form-login">
-                <label>Password</label>
-                <div class="pass-group">
-                  <input
-                    value="123456"
-                    type="password"
-                    class="pass-input"
-                    placeholder="Masukan password"
-                  />
-                  <span class="fas toggle-password fa-eye-slash"></span>
+                <div class="form-login">
+                  <label>Password</label>
+                  <div class="pass-group">
+                    <input
+                      value="123456"
+                      type="password"
+                      class="pass-input"
+                      placeholder="Masukan password"
+                    />
+                    <span class="fas toggle-password fa-eye-slash"></span>
+                  </div>
                 </div>
-              </div>
-              <div class="form-login">
-                <a class="btn btn-login" href="dashboard">Masuk</a>
-              </div>
+                <div class="form-login">
+                  <button class="btn btn-login" type="submit">Masuk</button>
+                </div>
+              </form>
             </div>
           </div>
           <div class="login-img">

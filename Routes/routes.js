@@ -1,13 +1,14 @@
 const express = require("express");
 const route = express.Router();
 const public_routes = require("./public.routes");
+const auth_route = require("./auth.routes");
 
-var LocalStorage = require("node-localstorage").LocalStorage,
+const LocalStorage = require("node-localstorage").LocalStorage,
   localStorage = new LocalStorage("./local-storage");
 
-var selected_layout = "index";
+let selected_layout = "index";
 
-var changeLayout = function (res) {
+const changeLayout = function (res) {
   setLayout();
   res.redirect(public_routes.dashboard);
 };
@@ -19,22 +20,10 @@ route.use(function (req, res, next) {
   next();
 });
 
-var setLayout = function () {
+const setLayout = function () {
   let current_layout = localStorage.getItem("layout");
   if (current_layout == "index") {
     selected_layout = "index";
-  }
-  if (current_layout == "index-one") {
-    selected_layout = "index-one";
-  }
-  if (current_layout == "index-two") {
-    selected_layout = "index-two";
-  }
-  if (current_layout == "index-three") {
-    selected_layout = "index-three";
-  }
-  if (current_layout == "index-four") {
-    selected_layout = "index-four";
   }
 };
 setLayout();
@@ -50,9 +39,7 @@ route.get("/", function (req, res) {
 // redirect **
 
 // auth
-route.get(public_routes.login, (req, res, next) => {
-  res.render("Auth/login");
-});
+route.use(auth_route)
 // auth **
 
 // main

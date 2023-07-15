@@ -1,8 +1,10 @@
+const { databaseHost, databaseName, databasePassword, databaseUser } = require("./environment");
+
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'your_username',
-  password: 'your_password',
-  database: 'your_database',
+  host: databaseHost,
+  user: databaseUser,
+  password: databasePassword,
+  database: databaseName,
 });
 
 connection.connect((error) => {
